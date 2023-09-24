@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Nanum Pen Script', cirsive;
+}
+
+#navbar { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eacdcc;
+    padding: 8px 12px;
+}
+
+.navbar-logo a {
+    font-size: 50px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar-menu li {
+    padding: 8px 12px;
+}
+
+.navbar-menu li:hover {
+    background-color: lightcoral;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none; 
+    color: #b0aeae;
+    font-size: 32px;
+}
+
+.navbar-bar {
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+
+#profile {
+    display: flex;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-bar {
+        display: block;
+        padding: 8px;
+    }
+
+}
