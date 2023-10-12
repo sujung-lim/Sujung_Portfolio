@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: 'Nanum Pen Script', cursive;
   }
+
   img {
     display: block;
     margin: 0;

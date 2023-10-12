@@ -6,9 +6,7 @@ const ProfileContainer = styled.div`
 `;
 
 const ProfileImage = styled.img`
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 50%;
 `;
 
 const AboutMe = styled.div`
@@ -23,7 +21,7 @@ const AboutMe = styled.div`
 function Profile() {
   return (
     <ProfileContainer>
-      <ProfileImage src="../../public/img/profile.JPG" alt="Profile" />
+      <ProfileImage src="/img/profile.JPG" alt="Profile" />
       <AboutMe>
         <h3>임수정</h3>
         <p>Lorem ipsum...</p>
