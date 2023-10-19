@@ -1,75 +1,108 @@
-body {
+body,
+p,
+div {
   margin: 0;
-  font-family: 'Nanum Pen Script', cirsive;
+  padding: 0;
 }
 
-#navbar { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #eacdcc;
-    padding: 8px 12px;
+body {
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #eacdcc;
+  --main-gray-color: #b0aeae;
+}
+
+/* navbar 메뉴 */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  padding: 8px 12px;
 }
 
 .navbar-logo a {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .navbar-menu {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
 }
 
 .navbar-menu li {
-    padding: 8px 12px;
+  padding: 8px 12px;
 }
 
 .navbar-menu li:hover {
-    background-color: lightcoral;
-    border-radius: 4px;
+  background-color: lightcoral;
+  border-radius: 4px;
 }
 
-a {
-    text-decoration: none; 
-    color: #b0aeae;
-    font-size: 32px;
+nav a,
+nav span {
+  text-decoration: none;
+  color: var(--main-gray-color);
+  font-size: 32px;
 }
 
 .navbar-bar {
-    display: none;
-    position: absolute;
-    right: 10px;
+  display: none;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
+
+/* 프로필 섹션 */
 
 #profile {
-    display: flex;
+  display: flex;
 }
 
+/* footer  */
+footer {
+  background-color: var(--main-color);
+}
 
-
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+  padding: 10px;
+  margin: 0;
+}
 
 @media screen and (max-width: 768px) {
-    #navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 24px;
-    }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
 
-    .navbar-menu {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
-    .navbar-menu li {
-        width: 100%;
-        text-align: center;
-    }
+  .navbar-menu li {
+    width: 100%;
+    text-align: center;
+  }
 
-    .navbar-bar {
-        display: block;
-        padding: 8px;
-    }
-
+  .navbar-bar {
+    display: block;
+    padding: 8px;
+  }
 }
