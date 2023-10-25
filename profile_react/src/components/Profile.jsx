@@ -5,27 +5,17 @@ const ProfileContainer = styled.div`
   display: flex;
 `;
 
-const ProfileImage = styled.img`
-  width: 50%;
-`;
-
-const AboutMe = styled.div`
-  h3 {
-    font-size: 24px;
-  }
-  p {
-    font-size: 16px;
-  }
+const Title = styled.div`
+  display: flex;
 `;
 
 function Profile() {
   return (
     <ProfileContainer>
-      <ProfileImage src="/img/profile.JPG" alt="Profile" />
-      <AboutMe>
-        <h3>임수정</h3>
-        <p>Lorem ipsum...</p>
-      </AboutMe>
+      <Title>
+        <h2>FRONT-END</h2>
+        <h2>DEVELOPER</h2>
+      </Title>
     </ProfileContainer>
   );
 }
