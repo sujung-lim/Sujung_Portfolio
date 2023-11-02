@@ -31,20 +31,15 @@ const MenuItem = styled.li`
   color: var(--point-color);
 `;
 
-const NavbarBottomLine = styled.span`
-  border-bottom: 2px solid var(--point-color);
-`;
-
 function Navbar() {
   return (
     <NavbarContainer>
       <Logo>SUJUNG LIM</Logo>
       <Menu>
-        <MenuItem>Main</MenuItem>
+        <MenuItem>Home</MenuItem>
         <MenuItem>About Me</MenuItem>
-        <MenuItem>Portfolio</MenuItem>
+        <MenuItem>Contact</MenuItem>
       </Menu>
-      <NavbarBottomLine></NavbarBottomLine>
     </NavbarContainer>
   );
 }

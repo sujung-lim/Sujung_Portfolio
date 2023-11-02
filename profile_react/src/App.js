@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
-import Profile from './components/Profile';
+import Home from './components/Home';
 // import Footer from './components/Footer';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const AppContainer = styled.div`
   background-color: var(--back-color);
-  height: 100%;
+  min-height: 100vh;
 `;
 
 function App() {
@@ -15,8 +15,7 @@ function App() {
     <AppContainer>
       <GlobalStyles />
       <Navbar />
-      <Profile />
-      {/* <Footer /> */}
+      <Home />
     </AppContainer>
   );
 }
