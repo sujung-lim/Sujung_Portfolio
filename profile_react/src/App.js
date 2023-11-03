@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-// import Footer from './components/Footer';
 import { GlobalStyles } from './styles/GlobalStyles';
 
 const AppContainer = styled.div`

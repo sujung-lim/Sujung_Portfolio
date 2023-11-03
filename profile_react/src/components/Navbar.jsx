@@ -6,6 +6,7 @@ const NavbarContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
+  height: 10vh;
 `;
 
 const Logo = styled.div`
