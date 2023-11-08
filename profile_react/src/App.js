@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { GlobalStyles } from './styles/GlobalStyles';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import { GlobalStyles } from './styles/GlobalStyles';
+import Portfolio from './components/Portfolio';
 
 const AppContainer = styled.div`
   background-color: var(--back-color);
@@ -15,6 +16,7 @@ function App() {
       <GlobalStyles />
       <Navbar />
       <Home />
+      <Portfolio />
     </AppContainer>
   );
 }

@@ -29,7 +29,7 @@ function Home() {
   };
 
   return (
-    <HomeContainer>
+    <HomeContainer className="section">
       <CarouselWrapper showTitle2={showTitle2}>
         {showTitle2 ? <Title2>PORTFOLIO</Title2> : null}
       </CarouselWrapper>
