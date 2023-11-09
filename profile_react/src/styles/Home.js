@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const HomeContainer = styled.div`
   margin-top: 50px;
   justify-content: center;
+  height: 100vh;
 `;
 
 export const TextFe = styled.h2`

@@ -6,44 +6,44 @@ const PortfolioData = [
   {
     id: 1,
     link: 'https://bebemarket.netlify.app/',
-    imageUrl: '../../public/img/Bebemarket.png',
+    imageUrl: '/img/Bebemarket.png',
     projectName: 'Bebe Market',
     projectType: 'Web Project',
   },
   {
     id: 2,
     link: 'https://algoview.co.kr/',
-    imageUrl: '',
+    imageUrl: '/img/Algoview.png',
     projectName: 'Algoview',
     projectType: 'Web Project',
   },
   {
     id: 3,
     link: 'https://yejify.github.io/GameMachine/',
-    imageUrl: '',
+    imageUrl: '/img/Gamemachine.png',
     projectName: 'Game Machine',
     projectType: 'Web Project',
   },
   {
     id: 4,
     link: 'https://sujung-lim.github.io/Vanilla-JS-MyGroceries/',
-    imageUrl: '',
+    imageUrl: '/img/Mygroceries.png',
     projectName: 'My Groceries',
     projectType: 'Web Project',
   },
   {
     id: 5,
-    link: '',
-    imageUrl: '',
-    projectName: '',
-    projectType: '',
+    link: 'https://sujung-lim.github.io/javascript-message-board/',
+    imageUrl: '/img/QandABoard.png',
+    projectName: 'Q&A Message Board',
+    projectType: 'Javascript Project',
   },
   {
     id: 6,
     link: '',
-    imageUrl: '',
-    projectName: '',
-    projectType: '',
+    imageUrl: '/img/Emons.png',
+    projectName: 'Website Clone with Bootstrap',
+    projectType: 'Web Project',
   },
 ];
 
@@ -51,15 +51,20 @@ const PortfolioGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  height: 100vh;
+  padding: 30px;
+
+  img {
+    width: 500px;
+    height: 300px;
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
-const PortfolioItem = styled.div`
-  height: 300px;
-`;
+const PortfolioItem = styled.div``;
 
 function PortfolioGridItem({ link, imageUrl, projectName, projectType }) {
   return (
