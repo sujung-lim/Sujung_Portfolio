@@ -25,7 +25,7 @@ export const Title = styled.div`
   font-size: 80px;
 `;
 
-export const CarouselWrapper = styled.div`
+export const CarouselWrapper = styled.div.attrs(() => ({}))`
   transition: transform 0.5s, opacity 0.5s;
   transform: ${({ showTitle2 }) =>
     showTitle2 ? 'translateX(0%)' : 'translateX(100%)'};

@@ -9,7 +9,7 @@ import {
   CarouselWrapper,
   Title2,
   AngleDownContainer,
-} from '../styles/Home';
+} from '../styles/Home.style';
 
 function Home() {
   const [showTitle2, setShowTitle2] = useState(false);
@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <HomeContainer className="section">
-      <CarouselWrapper showTitle2={showTitle2}>
+      <CarouselWrapper showTitle2={showTitle2 ? 1 : 0}>
         {showTitle2 ? <Title2>PORTFOLIO</Title2> : null}
       </CarouselWrapper>
       {!showTitle2 && (

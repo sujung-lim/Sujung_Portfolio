@@ -6,42 +6,42 @@ const PortfolioData = [
   {
     id: 1,
     link: 'https://bebemarket.netlify.app/',
-    imageUrl: '/img/Bebemarket.png',
+    imageUrl: process.env.PUBLIC_URL + '/img/Bebemarket.png',
     projectName: 'Bebe Market',
     projectType: 'Web Project',
   },
   {
     id: 2,
     link: 'https://algoview.co.kr/',
-    imageUrl: '/img/Algoview.png',
+    imageUrl: process.env.PUBLIC_URL + '/img/Algoview.png',
     projectName: 'Algoview',
     projectType: 'Web Project',
   },
   {
     id: 3,
     link: 'https://yejify.github.io/GameMachine/',
-    imageUrl: '/img/Gamemachine.png',
+    imageUrl: process.env.PUBLIC_URL + '/img/Gamemachine.png',
     projectName: 'Game Machine',
     projectType: 'Web Project',
   },
   {
     id: 4,
     link: 'https://sujung-lim.github.io/Vanilla-JS-MyGroceries/',
-    imageUrl: '/img/Mygroceries.png',
+    imageUrl: process.env.PUBLIC_URL + '/img/Mygroceries.png',
     projectName: 'My Groceries',
     projectType: 'Web Project',
   },
   {
     id: 5,
     link: 'https://sujung-lim.github.io/javascript-message-board/',
-    imageUrl: '/img/QandABoard.png',
+    imageUrl: process.env.PUBLIC_URL + '/img/QandABoard.png',
     projectName: 'Q&A Message Board',
     projectType: 'Javascript Project',
   },
   {
     id: 6,
     link: '',
-    imageUrl: '/img/Emons.png',
+    imageUrl: process.env.PUBLIC_URL + '/img/Emons.png',
     projectName: 'Website Clone with Bootstrap',
     projectType: 'Web Project',
   },
@@ -55,6 +55,7 @@ const PortfolioGrid = styled.div`
   padding: 30px;
 
   img {
+    display: block;
     width: 100%;
     height: 250px;
   }
@@ -77,7 +78,7 @@ const PortfolioItem = styled.div`
 function PortfolioGridItem({ link, imageUrl, projectName, projectType }) {
   return (
     <PortfolioItem>
-      <a href={link} className="work-image w-inline-block">
+      <a href={link} className="work-image">
         <img src={imageUrl} alt={projectName} />
       </a>
       <div className="work-description">
