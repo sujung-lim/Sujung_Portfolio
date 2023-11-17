@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Portfolio from './Portfolio';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -29,23 +30,26 @@ function Home() {
   };
 
   return (
-    <HomeContainer className="section">
-      <CarouselWrapper showTitle2={showTitle2 ? 1 : 0}>
-        {showTitle2 ? <Title2>PORTFOLIO</Title2> : null}
-      </CarouselWrapper>
-      {!showTitle2 && (
-        <Title>
-          <TextFe className="text-fe">FRONT-END</TextFe>
-          <TextDev className="text-dev">DEVELOPER</TextDev>
-        </Title>
-      )}
-      <AngleDownContainer onClick={handleScrollDown}>
-        <FontAwesomeIcon
-          icon={faAngleDown}
-          style={{ color: 'var(--point-color)', fontSize: '50px' }}
-        />
-      </AngleDownContainer>
-    </HomeContainer>
+    <>
+      <HomeContainer className="section">
+        <CarouselWrapper showTitle2={showTitle2 ? 1 : 0}>
+          {showTitle2 ? <Title2>PORTFOLIO</Title2> : null}
+        </CarouselWrapper>
+        {!showTitle2 && (
+          <Title>
+            <TextFe className="text-fe">FRONT-END</TextFe>
+            <TextDev className="text-dev">DEVELOPER</TextDev>
+          </Title>
+        )}
+        <AngleDownContainer onClick={handleScrollDown}>
+          <FontAwesomeIcon
+            icon={faAngleDown}
+            style={{ color: 'var(--point-color)', fontSize: '50px' }}
+          />
+        </AngleDownContainer>
+      </HomeContainer>
+      <Portfolio />
+    </>
   );
 }
 

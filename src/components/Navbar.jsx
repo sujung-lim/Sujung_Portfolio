@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavbarContainer = styled.nav`
   display: flex;
@@ -18,22 +19,25 @@ const Logo = styled.div`
   font-size: 50px;
   cursor: pointer;
   color: var(--point-color);
+  padding-left: 20px;
 `;
 
 const Menu = styled.ul`
   display: flex;
   list-style: none;
-  padding-left: 0;
+  padding-right: 30px;
 `;
 
 const MenuItem = styled.li`
   padding: 8px 12px;
   &:hover {
-    background-color: lightcoral;
-    border-radius: 4px;
+    border-bottom: 2px solid var(--point-color);
   }
   cursor: pointer;
   font-size: 25px;
+`;
+
+const StyledLink = styled(Link)`
   color: var(--point-color);
 `;
 
@@ -42,9 +46,12 @@ function Navbar() {
     <NavbarContainer>
       <Logo>SUJUNG LIM</Logo>
       <Menu>
-        <MenuItem>Home</MenuItem>
-        <MenuItem>About Me</MenuItem>
-        <MenuItem>Contact</MenuItem>
+        <MenuItem>
+          <StyledLink to="/">Home</StyledLink>
+        </MenuItem>
+        <MenuItem>
+          <StyledLink to="/contact">Contact</StyledLink>
+        </MenuItem>
       </Menu>
     </NavbarContainer>
   );

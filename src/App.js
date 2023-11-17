@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 const AppContainer = styled.div`
   background-color: var(--back-color);
@@ -12,12 +13,16 @@ const AppContainer = styled.div`
 
 function App() {
   return (
-    <AppContainer>
-      <GlobalStyles />
-      <Navbar />
-      <Home />
-      <Portfolio />
-    </AppContainer>
+    <Router>
+      <AppContainer>
+        <GlobalStyles />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </AppContainer>
+    </Router>
   );
 }
 
