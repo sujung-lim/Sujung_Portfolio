@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styles from '../styles/Portfolio.style';
+import * as S from '../styles/Portfolio.style';
 
 // 포트폴리오 데이터
 const PortfolioData = [
@@ -49,30 +49,30 @@ const PortfolioData = [
 
 function PortfolioGridItem({ link, imageUrl, projectName, projectType }) {
   return (
-    <Styles.PortfolioItem>
-      <Styles.ImageContainer>
+    <S.PortfolioItem>
+      <S.ImageContainer>
         <a href={link} className="work-image">
           <img src={imageUrl} alt={projectName} />
         </a>
-        <Styles.Overlay />
-        <Styles.TextOverlay>
+        <S.Overlay />
+        <S.TextOverlay>
           <div className="work-description">
-            <Styles.ProjectName href={link} className="project-name-link">
+            <S.ProjectName href={link} className="project-name-link">
               {projectName}
-            </Styles.ProjectName>
-            <Styles.ProjectType className="paragraph-light">
+            </S.ProjectName>
+            <S.ProjectType className="paragraph-light">
               {projectType}
-            </Styles.ProjectType>
+            </S.ProjectType>
           </div>
-        </Styles.TextOverlay>
-      </Styles.ImageContainer>
-    </Styles.PortfolioItem>
+        </S.TextOverlay>
+      </S.ImageContainer>
+    </S.PortfolioItem>
   );
 }
 
 function Portfolio() {
   return (
-    <Styles.PortfolioGrid>
+    <S.PortfolioGrid>
       {PortfolioData.map((item, index) => (
         <PortfolioGridItem
           key={item.id}
@@ -82,7 +82,7 @@ function Portfolio() {
           projectType={item.projectType}
         />
       ))}
-    </Styles.PortfolioGrid>
+    </S.PortfolioGrid>
   );
 }
 

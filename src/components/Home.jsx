@@ -2,15 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Portfolio from './Portfolio';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import {
-  HomeContainer,
-  TextFe,
-  TextDev,
-  Title,
-  CarouselWrapper,
-  Title2,
-  AngleDownContainer,
-} from '../styles/Home.style';
+import * as S from '../styles/Home.style';
 
 function Home() {
   const [showTitle2, setShowTitle2] = useState(false);
@@ -31,23 +23,27 @@ function Home() {
 
   return (
     <>
-      <HomeContainer className="section">
-        <CarouselWrapper showTitle2={showTitle2 ? 1 : 0}>
-          {showTitle2 ? <Title2>PORTFOLIO</Title2> : null}
-        </CarouselWrapper>
+      <S.HomeContainer className="section">
+        <S.CarouselWrapper showTitle2={showTitle2 ? 1 : 0}>
+          {showTitle2 ? (
+            <S.Title2>
+              <S.TextPF>PORTFOLIO</S.TextPF>
+            </S.Title2>
+          ) : null}
+        </S.CarouselWrapper>
         {!showTitle2 && (
-          <Title>
-            <TextFe className="text-fe">FRONT-END</TextFe>
-            <TextDev className="text-dev">DEVELOPER</TextDev>
-          </Title>
+          <S.Title>
+            <S.TextFe className="text-fe">FRONT-END</S.TextFe>
+            <S.TextDev className="text-dev">DEVELOPER</S.TextDev>
+          </S.Title>
         )}
-        <AngleDownContainer onClick={handleScrollDown}>
+        <S.AngleDownContainer onClick={handleScrollDown}>
           <FontAwesomeIcon
             icon={faAngleDown}
             style={{ color: 'var(--point-color)', fontSize: '50px' }}
           />
-        </AngleDownContainer>
-      </HomeContainer>
+        </S.AngleDownContainer>
+      </S.HomeContainer>
       <Portfolio />
     </>
   );

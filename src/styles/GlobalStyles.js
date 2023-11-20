@@ -10,7 +10,10 @@ export const GlobalStyles = createGlobalStyle`
 
   :root {
     --back-color: #F6EFE5;
-    --point-color: #DB3326;
+    // --point-color: #DB3326; /*살짝 쨍한 빨강*/
+    --point-color: #cb272c;
+    --gray-color: #DEDCDC;
+    --pink-color: #EBC4C3;
   }
 `;
 

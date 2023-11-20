@@ -4,7 +4,7 @@ export const PortfolioGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  height: 100vh;
+  height: calc(100vh-10vh); /* navbar 높이 제외한 뷰포트 높이 */
   padding: 30px;
 
   img {
@@ -14,11 +14,12 @@ export const PortfolioGrid = styled.div`
   }
 
   @media (min-width: 768px) {
+    /* 태블릿 화면 */
     grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media (max-width: 767px) {
-    // 모바일 화면에서는 1열씩 나열
+    /* 모바일 화면에서는 1열씩 나열 */
     grid-template-columns: 1fr;
   }
 `;
@@ -28,7 +29,7 @@ export const PortfolioItem = styled.div`
   text-align: center;
 `;
 
-// 포트폴리오 이미지
+/* 포트폴리오 이미지 */
 export const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -53,7 +54,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-// 포트폴리오 이름
+/* 포트폴리오 이름 */
 export const TextOverlay = styled.div`
   position: absolute;
   top: 0;
