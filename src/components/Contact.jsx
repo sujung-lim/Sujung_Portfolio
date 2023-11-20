@@ -18,9 +18,33 @@ function Contact() {
       </S.ProfileContainer>
       <div>
         <S.ContactListUl>
-          <S.ContactList>Resume</S.ContactList>
-          <S.ContactList>GitHub</S.ContactList>
-          <S.ContactList>Blog</S.ContactList>
+          <S.ContactList>
+            <a
+              href="https://sujunglim.oopy.io/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Resume</p>
+            </a>
+          </S.ContactList>
+          <S.ContactList>
+            <a
+              href="https://github.com/sujung-lim"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>GitHub</p>
+            </a>
+          </S.ContactList>
+          <S.ContactList>
+            <a
+              href="https://dev-su-diary.tistory.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Blog</p>
+            </a>
+          </S.ContactList>
         </S.ContactListUl>
       </div>
     </S.ContactSection>

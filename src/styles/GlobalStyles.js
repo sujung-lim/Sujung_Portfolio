@@ -8,6 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  a {
+    color: inherit;
+  }
+
   :root {
     --back-color: #F6EFE5;
     // --point-color: #DB3326; /*살짝 쨍한 빨강*/

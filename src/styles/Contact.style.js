@@ -50,14 +50,77 @@ export const ContactListUl = styled.ul`
   list-style: none;
   margin-top: calc(1rem + 1%);
   margin-bottom: calc(1rem + 1%);
+
+  //   li:first-child {
+  //     background-image: url('${process.env.PUBLIC_URL}/img/cv.png');
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     background-position: center;
+  //     opacity: 0.5;
+  //   }
 `;
 
 export const ContactList = styled.li`
+  position: relative;
+  display: flex;
+  align-items: center;
   padding: 100px;
-  font-size: 30px;
   border-radius: 5%;
   box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1) /* 왼쪽과 위쪽 그림자 */,
     5px 5px 10px rgba(0, 0, 0, 0.1) /* 오른쪽과 아래쪽 그림자 */;
+  cursor: pointer;
+
+  /* 이력서 */
+  &:first-child::before {
+    content: '';
+    background-image: url('${process.env.PUBLIC_URL}/img/cv.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* 깃허브 */
+  &:nth-child(2)::before {
+    content: '';
+    background-image: url('${process.env.PUBLIC_URL}/img/Github.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* 블로그 */
+  &:nth-child(3)::before {
+    content: '';
+    background-image: url('${process.env.PUBLIC_URL}/img/blog.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  p {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 50px;
+  }
 
   @media (min-width: 1300px) {
     height: 250px;
