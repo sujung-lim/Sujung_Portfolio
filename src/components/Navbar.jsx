@@ -1,6 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+function Navbar() {
+  const navigate = useNavigate();
+
+  const handleMenuClick = path => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
+  return (
+    <NavbarContainer>
+      <Logo onClick={() => handleMenuClick('/')}>SUJUNG LIM</Logo>
+      <Menu>
+        <MenuItem>
+          <StyledLink onClick={() => handleMenuClick('/')} to="/">
+            Home
+          </StyledLink>
+        </MenuItem>
+        <MenuItem>
+          <StyledLink onClick={() => handleMenuClick('/contact')} to="/contact">
+            Contact
+          </StyledLink>
+        </MenuItem>
+      </Menu>
+    </NavbarContainer>
+  );
+}
+
+export default Navbar;
 
 const NavbarContainer = styled.nav`
   display: flex;
@@ -15,7 +45,7 @@ const NavbarContainer = styled.nav`
   z-index: 100;
 `;
 
-const Logo = styled.div`
+const Logo = styled.nav`
   font-size: 50px;
   cursor: pointer;
   color: var(--point-color);
@@ -40,21 +70,3 @@ const MenuItem = styled.li`
 const StyledLink = styled(Link)`
   color: var(--point-color);
 `;
-
-function Navbar() {
-  return (
-    <NavbarContainer>
-      <Logo>SUJUNG LIM</Logo>
-      <Menu>
-        <MenuItem>
-          <StyledLink to="/">Home</StyledLink>
-        </MenuItem>
-        <MenuItem>
-          <StyledLink to="/contact">Contact</StyledLink>
-        </MenuItem>
-      </Menu>
-    </NavbarContainer>
-  );
-}
-
-export default Navbar;

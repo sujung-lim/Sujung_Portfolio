@@ -39,6 +39,7 @@ export const Overlay = styled.div`
   background-color: #c9a18b;
   opacity: 0.5;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 `;
 
 export const ImageContainer = styled.div`
@@ -67,6 +68,7 @@ export const TextOverlay = styled.div`
   align-items: center;
   visibility: visible;
   transition: visibility 0s ease;
+  pointer-events: none;
 
   ${ImageContainer}:hover & {
     visibility: hidden;
@@ -74,10 +76,11 @@ export const TextOverlay = styled.div`
 `;
 
 export const ProjectName = styled.a`
-  font-size: 30px;
-  color: inherit;
+  font-size: 40px;
+  position: relative;
+  z-index: 1;
 `;
 
 export const ProjectType = styled.div`
-  font-size: 24px;
+  font-size: 30px;
 `;

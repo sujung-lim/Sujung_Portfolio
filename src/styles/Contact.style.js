@@ -43,6 +43,33 @@ export const ProfileBtnContainer = styled.div`
   }
 `;
 
+export const ModalContainer = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--pink-color);
+  padding: 30px;
+  z-index: 1000;
+
+  button {
+    margin-top: 10px;
+  }
+`;
+
+export const ModalBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+`;
+
 export const ContactListUl = styled.ul`
   display: flex;
   gap: 10%;

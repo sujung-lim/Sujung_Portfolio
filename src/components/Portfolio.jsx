@@ -40,7 +40,7 @@ const PortfolioData = [
   },
   {
     id: 6,
-    link: '',
+    link: 'https://sujung-lim.github.io/Emons-Clone-Group-Project/',
     imageUrl: process.env.PUBLIC_URL + '/img/Emons.png',
     projectName: 'Website Clone',
     projectType: 'WEB',
@@ -51,13 +51,23 @@ function PortfolioGridItem({ link, imageUrl, projectName, projectType }) {
   return (
     <S.PortfolioItem>
       <S.ImageContainer>
-        <a href={link} className="work-image">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="work-image"
+        >
           <img src={imageUrl} alt={projectName} />
         </a>
         <S.Overlay />
         <S.TextOverlay>
           <div className="work-description">
-            <S.ProjectName href={link} className="project-name-link">
+            <S.ProjectName
+              href={link}
+              target="_blank"
+              rel="noopener"
+              className="project-name-link"
+            >
               {projectName}
             </S.ProjectName>
             <S.ProjectType className="paragraph-light">

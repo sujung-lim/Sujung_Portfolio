@@ -1,7 +1,9 @@
 import React from 'react';
 import * as S from '../styles/Contact.style';
+import { useState } from 'react';
 
 function Contact() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <S.ContactSection>
       <S.ProfileContainer>
@@ -12,8 +14,20 @@ function Contact() {
         <p>임수정</p>
         <p>Front-end Developer</p>
         <S.ProfileBtnContainer>
-          <button>E-mail</button>
-          <button>Phone</button>
+          <a href="mailto:sujunglim94@gmail.com">
+            <button>E-mail</button>
+          </a>
+          <button onClick={() => setShowModal(true)}>Phone</button>
+          {showModal && (
+            <S.ModalBackground>
+              <S.ModalContainer>
+                <p>
+                  메시지 전송: <a href="sms:010-4052-6579">010-4052-6579</a>
+                </p>
+                <button onClick={() => setShowModal(false)}>Close</button>
+              </S.ModalContainer>
+            </S.ModalBackground>
+          )}
         </S.ProfileBtnContainer>
       </S.ProfileContainer>
       <div>
