@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleMenuClick = path => {
     navigate(path);
@@ -15,14 +17,14 @@ function Navbar() {
     <NavbarContainer>
       <Logo onClick={() => handleMenuClick('/')}>SUJUNG LIM</Logo>
       <Menu>
-        <MenuItem>
+        <MenuItem active={location.pathname === '/'}>
           <StyledLink onClick={() => handleMenuClick('/')} to="/">
-            Home
+            <span>Home</span>
           </StyledLink>
         </MenuItem>
-        <MenuItem>
+        <MenuItem active={location.pathname === '/contact'}>
           <StyledLink onClick={() => handleMenuClick('/contact')} to="/contact">
-            Contact
+            <span>Contact</span>
           </StyledLink>
         </MenuItem>
       </Menu>
@@ -60,11 +62,19 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   padding: 8px 12px;
-  &:hover {
-    border-bottom: 2px solid var(--point-color);
-  }
   cursor: pointer;
   font-size: 25px;
+
+  span {
+    box-shadow: ${props =>
+      props.active ? 'inset 0 -10px 0 var(--pink-color)' : 'none'};
+  }
+
+  &:hover {
+    span {
+      box-shadow: inset 0 -10px 0 var(--pink-color);
+    }
+  }
 `;
 
 const StyledLink = styled(Link)`

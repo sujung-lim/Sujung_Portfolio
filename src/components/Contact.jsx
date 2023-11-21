@@ -19,8 +19,8 @@ function Contact() {
           </a>
           <button onClick={() => setShowModal(true)}>Phone</button>
           {showModal && (
-            <S.ModalBackground>
-              <S.ModalContainer>
+            <S.ModalBackground onClick={() => setShowModal(false)}>
+              <S.ModalContainer onClick={e => e.stopPropagation()}>
                 <p>
                   메시지 전송: <a href="sms:010-4052-6579">010-4052-6579</a>
                 </p>

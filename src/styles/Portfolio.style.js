@@ -13,13 +13,13 @@ export const PortfolioGrid = styled.div`
     height: 300px;
   }
 
+  /* 태블릿 화면 */
   @media (min-width: 768px) {
-    /* 태블릿 화면 */
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  /* 모바일 화면에서는 1열씩 나열 */
   @media (max-width: 767px) {
-    /* 모바일 화면에서는 1열씩 나열 */
     grid-template-columns: 1fr;
   }
 `;

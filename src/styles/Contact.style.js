@@ -78,13 +78,15 @@ export const ContactListUl = styled.ul`
   margin-top: calc(1rem + 1%);
   margin-bottom: calc(1rem + 1%);
 
-  //   li:first-child {
-  //     background-image: url('${process.env.PUBLIC_URL}/img/cv.png');
-  //     background-size: contain;
-  //     background-repeat: no-repeat;
-  //     background-position: center;
-  //     opacity: 0.5;
-  //   }
+  /* 모바일 화면*/
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      /* gap이 적용이 되지 않아서 margin 사용 */
+      margin-bottom: 10%;
+    }
+  }
 `;
 
 export const ContactList = styled.li`
