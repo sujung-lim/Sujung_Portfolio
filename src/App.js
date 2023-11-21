@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { GlobalStyles } from './styles/GlobalStyles';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -18,8 +18,8 @@ function App() {
         <GlobalStyles />
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </AppContainer>
     </Router>
