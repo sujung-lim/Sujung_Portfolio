@@ -55,6 +55,7 @@ const Logo = styled.nav`
 
   /* 모바일 화면 */
   @media (max-width: 767px) {
+    padding-left: 10px;
     font-size: 30px;
   }
 `;
