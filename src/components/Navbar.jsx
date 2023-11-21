@@ -45,6 +45,11 @@ const NavbarContainer = styled.nav`
   top: 0;
   background-color: var(--back-color);
   z-index: 100;
+
+  /* 모바일 화면 */
+  @media (max-width: 767px) {
+    padding: 5px;
+  }
 `;
 
 const Logo = styled.nav`
@@ -55,7 +60,6 @@ const Logo = styled.nav`
 
   /* 모바일 화면 */
   @media (max-width: 767px) {
-    padding-left: 10px;
     font-size: 30px;
   }
 `;

@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Sujung_Portfolio/static/js/main.e7761e05.js",
+    "main.js": "/Sujung_Portfolio/static/js/main.249261cd.js",
     "index.html": "/Sujung_Portfolio/index.html",
-    "main.e7761e05.js.map": "/Sujung_Portfolio/static/js/main.e7761e05.js.map"
+    "main.249261cd.js.map": "/Sujung_Portfolio/static/js/main.249261cd.js.map"
   },
   "entrypoints": [
-    "static/js/main.e7761e05.js"
+    "static/js/main.249261cd.js"
   ]
 }
