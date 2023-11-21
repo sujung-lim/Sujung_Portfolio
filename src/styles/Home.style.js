@@ -5,11 +5,30 @@ export const HomeContainer = styled.div`
   height: 100vh;
 `;
 
+export const Title = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  color: var(--point-color);
+  font-size: 80px;
+
+  /* 모바일 화면 */
+  @media (max-width: 767px) {
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
 export const TextFe = styled.h2`
   padding-left: 10%;
   font-weight: normal;
   text-decoration: underline;
   text-decoration-color: var(--pink-color);
+
+  /* 모바일 화면 */
+  @media (max-width: 767px) {
+    font-size: 50px;
+  }
 `;
 
 export const TextDev = styled.h2`
@@ -17,14 +36,11 @@ export const TextDev = styled.h2`
   font-weight: normal;
   text-decoration: underline;
   text-decoration-color: var(--pink-color);
-`;
 
-export const Title = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 80vh;
-  color: var(--point-color);
-  font-size: 80px;
+  /* 모바일 화면 */
+  @media (max-width: 767px) {
+    font-size: 50px;
+  }
 `;
 
 export const CarouselWrapper = styled.div.attrs(() => ({}))`
