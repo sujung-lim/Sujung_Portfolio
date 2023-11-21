@@ -22,7 +22,6 @@ export const TextDev = styled.h2`
 export const Title = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 80vh;
   color: var(--point-color);
   font-size: 80px;
@@ -50,6 +49,11 @@ export const TextPF = styled.p`
   font-size: 150px;
   background-color: var(--pink-color);
   padding: 100px;
+
+  /* 모바일 화면 */
+  @media (max-width: 767px) {
+    font-size: 50px;
+  }
 `;
 
 /* 스크롤 다운 화살표 */

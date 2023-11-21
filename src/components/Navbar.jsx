@@ -52,12 +52,23 @@ const Logo = styled.nav`
   cursor: pointer;
   color: var(--point-color);
   padding-left: 20px;
+
+  /* 모바일 화면 */
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
 `;
 
 const Menu = styled.ul`
   display: flex;
   list-style: none;
   padding-right: 30px;
+
+  /* 모바일 화면 */
+  @media (max-width: 767px) {
+    font-size: 20px;
+    padding-right: 10px;
+  }
 `;
 
 const MenuItem = styled.li`
