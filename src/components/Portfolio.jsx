@@ -5,9 +5,9 @@ import * as S from '../styles/Portfolio.style';
 const PortfolioData = [
   {
     id: 1,
-    link: 'https://bebemarket.netlify.app/',
-    imageUrl: process.env.PUBLIC_URL + '/img/Bebemarket.png',
-    projectName: 'Bebe Market',
+    link: 'https://yejify.github.io/GameMachine/',
+    imageUrl: process.env.PUBLIC_URL + '/img/Gamemachine.png',
+    projectName: 'Game Machine',
     projectType: 'WEB',
   },
   {
@@ -19,9 +19,9 @@ const PortfolioData = [
   },
   {
     id: 3,
-    link: 'https://yejify.github.io/GameMachine/',
-    imageUrl: process.env.PUBLIC_URL + '/img/Gamemachine.png',
-    projectName: 'Game Machine',
+    ink: 'https://bebemarket.netlify.app/',
+    imageUrl: process.env.PUBLIC_URL + '/img/Bebemarket.png',
+    projectName: 'Bebe Market',
     projectType: 'WEB',
   },
   {
