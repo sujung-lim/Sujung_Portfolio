@@ -1,8 +1,8 @@
 import React from 'react';
-import * as S from '../styles/Contact.style';
+import * as S from '../styles/About.style';
 import { useState } from 'react';
 
-function Contact() {
+function About() {
   const [showModal, setShowModal] = useState(false);
   return (
     <S.ContactSection>
@@ -30,7 +30,7 @@ function Contact() {
           )}
         </S.ProfileBtnContainer>
       </S.ProfileContainer>
-      <div>
+      <S.CtListContainer>
         <S.ContactListUl>
           <S.ContactList>
             <a
@@ -60,9 +60,9 @@ function Contact() {
             </a>
           </S.ContactList>
         </S.ContactListUl>
-      </div>
+      </S.CtListContainer>
     </S.ContactSection>
   );
 }
 
-export default Contact;
+export default About;

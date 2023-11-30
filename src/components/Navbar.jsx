@@ -22,9 +22,9 @@ function Navbar() {
             <span>Home</span>
           </StyledLink>
         </MenuItem>
-        <MenuItem active={location.pathname === '/contact'}>
-          <StyledLink onClick={() => handleMenuClick('/contact')} to="/contact">
-            <span>Contact</span>
+        <MenuItem active={location.pathname === '/about'}>
+          <StyledLink onClick={() => handleMenuClick('/about')} to="/about">
+            <span>About</span>
           </StyledLink>
         </MenuItem>
       </Menu>

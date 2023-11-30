@@ -70,10 +70,14 @@ export const ModalBackground = styled.div`
   z-index: 999;
 `;
 
+export const CtListContainer = styled.div`
+  width: 100%;
+`;
+
 export const ContactListUl = styled.ul`
   display: flex;
   gap: 10%;
-  justify-content: center;
+  justify-content: space-evenly;
   list-style: none;
   margin-top: calc(1rem + 1%);
   margin-bottom: calc(1rem + 1%);
@@ -81,6 +85,7 @@ export const ContactListUl = styled.ul`
   /* 모바일 화면*/
   @media (max-width: 767px) {
     flex-direction: column;
+    align-items: center;
 
     & > *:not(:last-child) {
       /* gap이 적용이 되지 않아서 margin 사용 */
@@ -92,8 +97,10 @@ export const ContactListUl = styled.ul`
 export const ContactList = styled.li`
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 100px;
+  width: 250px;
+  height: 250px;
   border-radius: 5%;
   box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1) /* 왼쪽과 위쪽 그림자 */,
     5px 5px 10px rgba(0, 0, 0, 0.1) /* 오른쪽과 아래쪽 그림자 */;
@@ -112,6 +119,7 @@ export const ContactList = styled.li`
     right: 0;
     bottom: 0;
     left: 0;
+    border-radius: 5%;
   }
 
   /* 깃허브 */
@@ -127,6 +135,7 @@ export const ContactList = styled.li`
     right: 0;
     bottom: 0;
     left: 0;
+    border-radius: 5%;
   }
 
   /* 블로그 */
@@ -142,6 +151,7 @@ export const ContactList = styled.li`
     right: 0;
     bottom: 0;
     left: 0;
+    border-radius: 5%;
   }
 
   p {
@@ -152,6 +162,11 @@ export const ContactList = styled.li`
   }
 
   @media (min-width: 1300px) {
-    height: 250px;
+    width: 400px;
+    height: 400px;
+  }
+
+  @media (max-width: 767px) {
+    width: 400px;
   }
 `;
