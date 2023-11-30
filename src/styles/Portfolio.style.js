@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PortfolioGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   height: calc(100vh-10vh); /* navbar 높이 제외한 뷰포트 높이 */
   padding: 30px;
@@ -14,8 +14,8 @@ export const PortfolioGrid = styled.div`
   }
 
   /* 태블릿 화면 */
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
   }
 
   /* 모바일 화면에서는 1열씩 나열 */
